@@ -10,9 +10,9 @@ p(meta). 2 a
 # Power on the *DEBUGGER* machine
 # Start windbg and select File->Kernel Debug (or @run windbg -k@).
   Windbg will start and display:
-  <blockquote> Opened \\.\com1
-      Waiting to reconnect...</blockquote>
+  <code> Opened \\.\com1<br />
+      Waiting to reconnect...</code>
 # Power the *DEBUGEE* machine
 # When the machines connect, windbg will display:
-<code>Connected to Windows Server 2003 3790 x86 compatible target at (Tue Jun  2 16:51:32.112 2009 (GMT-8)), ptr64 FALSE
+<code>Connected to Windows Server 2003 3790 x86 compatible target at (Tue Jun  2 16:51:32.112 2009 (GMT-8)), ptr64 FALSE</ br>
 Kernel Debugger connection established.</code>
