@@ -6,10 +6,10 @@ title: Debug the Windows kernel with WinDBG over serial
 h1. {{ page.title }}
 
 # Power on the DEBUGGER machine
-# Start windbg and select File->Kernel Debug (or run windbg -k).x
+# Start windbg and select File->Kernel Debug (or @run windbg -k@).
   Windbg will start and display:
-   Opened \\.\com1
-   Waiting to reconnect...
+   @Opened \\.\com1
+   Waiting to reconnect...@
 # Power the DEBUGEE machine
 # Notice the machines connect
    Connected to Windows Server 2003 3790 x86 compatible target at (Tue Jun  2 16:51:32.112 2009 (GMT-8)), ptr64 FALSE
