@@ -10,7 +10,8 @@ p(meta). 2 a
 # Power on the *DEBUGGER* machine
 # Start windbg and select File->Kernel Debug (or @run windbg -k@).
   Windbg will start and display:
-  bq. Opened \\.\com1
+
+bq. Opened \\.\com1
      Waiting to reconnect...
 # Power the *DEBUGEE* machine
 # When the machines connect, windbg will display:
