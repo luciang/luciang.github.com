@@ -68,7 +68,8 @@ body {
   margin: 0 auto;
   z-index: 1;
   position: relative;
-  padding-top: 160px; }
+  padding-top: 160px;
+  text-align: justify; }
 
 #top {
   position: absolute;
