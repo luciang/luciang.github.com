@@ -352,10 +352,6 @@ body.projects p.page-desc {
     font-size: 1.2em; }
   .article .content #archived-comments li {
     font-size: 1.0em; }
-  .article .content .github-ad {
-    border-left: 4px solid #666;
-    padding-left: 10px;
-    color: #fff; }
 
 body.projects ol.projects > li {
   padding-top: 20px;
