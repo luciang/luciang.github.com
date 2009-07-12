@@ -14,5 +14,5 @@ p(meta). 2 a
       Waiting to reconnect...</blockquote>
 # Power the *DEBUGEE* machine
 # When the machines connect, windbg will display:
-bc. Connected to Windows Server 2003 3790 x86 compatible target at (Tue Jun  2 16:51:32.112 2009 (GMT-8)), ptr64 FALSE
-   Kernel Debugger connection established.
+<code>Connected to Windows Server 2003 3790 x86 compatible target at (Tue Jun  2 16:51:32.112 2009 (GMT-8)), ptr64 FALSE
+Kernel Debugger connection established.</code>
