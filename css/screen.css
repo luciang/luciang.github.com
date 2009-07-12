@@ -127,7 +127,7 @@ h1.site-header {
     float: left;
     margin-right: 10px; }
     #navigation li a, #navigation li a:active {
-      font-family: "Lucida Grande", arial, sans-serif;
+      font-family: sans-serif;
       display: block;
       color: #b8bdc1;
       padding: 0 0.8em 0 0.8em;
@@ -249,7 +249,7 @@ body.projects p.page-desc {
   line-height: 1.5em;
   width: 540px; }
 .article .content {
-  font-family: "Lucida Grande", Arial, sans-serif;
+  font-family: sans-serif;
   margin-bottom: 50px; }
   .article .content > * {
     width: 540px; }
@@ -377,7 +377,7 @@ body.projects ol.projects > li {
     body.projects ol.projects > li p.link {
       font-size: 1.2em; }
       body.projects ol.projects > li p.link a, body.projects ol.projects > li p.link a:active {
-        font-family: "Lucida Grande", arial, sans-serif;
+        font-family: sans-serif;
         display: block;
         color: #b8bdc1;
         padding: 0 0.8em 0 0.8em;
@@ -532,7 +532,7 @@ body.projects-js ol.projects > li {
     font-size: 1.4em;
     text-align: center; }
     .tumble .prevnext a {
-      font-family: "Lucida Grande", arial, sans-serif;
+      font-family: sans-serif;
       display: block;
       color: #b8bdc1;
       padding: 0 0.8em 0 0.8em;
