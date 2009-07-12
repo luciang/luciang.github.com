@@ -55,7 +55,7 @@ html {
 
 body {
   font-size: 62.5%;
-  font-family: "Lucida Grande", arial, sans-serif;
+  font-family: sans-serif;
   color: #b8bdc1;
   background: transparent url(/images/background-glow.png) no-repeat center top;
   min-height: 538px;
@@ -272,7 +272,7 @@ body.projects p.page-desc {
     .article .content p code, .article .content ul code, .article .content ol code, .article .content blockquote code {
       font-size: 1.2em; }
   .article .content h2, .article .content h3 {
-    font-family: "Lucida Grande", arial, sans-serif;
+    font-family: sans-serif;
     word-spacing: 0.2em;
     width: 540px;
     line-height: 1.5em; }
@@ -347,7 +347,7 @@ body.projects p.page-desc {
   .article .content .left.inset {
     margin-left: 230px; }
   .article .content #archived-comments h1 {
-    font-family: "Lucida Grande", arial, sans-serif; }
+    font-family: sans-serif; }
   .article .content #archived-comments pre {
     font-size: 1.2em; }
   .article .content #archived-comments li {
