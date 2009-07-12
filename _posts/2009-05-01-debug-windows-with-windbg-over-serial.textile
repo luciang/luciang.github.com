@@ -5,11 +5,10 @@ title: Debug the Windows kernel with WinDBG over serial
 
 h1. {{ page.title }}
 
-p. 
-# Power on the *DEBUGGER* machine
+p. # Power on the *DEBUGGER* machine
 # Start windbg and select File->Kernel Debug (or @run windbg -k@).
   Windbg will start and display:
-bc. Opened \\.\com1
+ bc. Opened \\.\com1
    Waiting to reconnect...
 # Power the *DEBUGEE* machine
 # When the machines connect, windbg will display:
