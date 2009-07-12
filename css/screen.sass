@@ -1,0 +1,756 @@
+@import reset.sass
+
+!bright_blue = #7ab8f8
+!standard_text = #b8bdc1
+!very_bright_text = #fff
+!bright_text = #d6dbde
+!slightly_dull_text = #939ba4
+!dull_text = #5b6168
+!very_dull_text = #4c5156
+!grey_background = #393e44
+ 
+=standard_text_size
+  :font-size 1.4em
+  :line-height 1.5em
+  
+=lucida_cons
+  :font-family "Lucida Grande", arial, sans-serif
+  
+=big_white_heading
+  :font-size 1.8em
+  :color = !very_bright_text
+
+=highlight_link
+  :font-family "Lucida Grande", arial, sans-serif
+  :display block
+  :color = !standard_text
+  :padding 0 0.8em 0 0.8em
+  :background-color = !very_dull_text
+  :line-height 2.2em
+
+=highlight_link_hover
+  :color = !very_bright_text
+  :background-color = !dull_text
+
+=highlight_after
+  :content ' →'
+
+/ Site-wide element styles
+
+a
+  :color = !bright_blue
+  :text-decoration none
+
+a:hover, a:active
+  :color = !very_bright_text
+
+strong
+  :color = !bright_text
+
+/* Layout styles
+
+html
+  :font-size 100%
+  :background #31363c url(/images/background.gif)
+  
+body
+  :font-size 62.5%
+  +lucida_cons
+  :color = !standard_text
+  :background transparent url(/images/background-glow.png) no-repeat center top
+  :min-height 538px
+  :padding-bottom 5em
+
+  &.grid #body-inner
+    :background transparent url(/images/grid.gif) repeat-y
+
+#body-inner
+  :width 760px
+  :margin 0 auto
+  :z-index 1
+  :position relative
+  :padding-top = 110+50px
+
+#top
+  :position absolute
+  :top 0
+  :left 0
+  :text-indent -2000px
+
+#about
+  :clear both
+  :background-color = !grey_background
+  :-webkit-border-radius 5px
+  :-moz-border-radius 5px
+  :padding 20px 20px 15px 20px
+  :margin-top 40px
+  
+  :position relative
+  
+  p.intro, #navigation
+    :position absolute
+    :left 20px
+    :width 400px
+  
+  p.intro
+    :top 15px
+    :font-size 2.1em
+    :line-height 1.545em
+    
+  #navigation
+    :bottom 20px
+
+  p.contact
+    :top 10.5em
+    
+  p.contact, p.blurb, p.recent
+    :font-size 1.2em
+    :line-height 1.8em
+  
+  p.blurb, p.recent, p.contact
+    :margin-left 420px
+    
+  p.blurb, p.recent
+    :margin-bottom 9px
+
+h1.site-header
+  :position absolute
+  :top 50px
+  :left 0px
+  :width 210px
+  :height 55px
+  / Not preferable but on a transparent bg
+  :text-indent -10000px 
+  span
+    :position absolute
+    :top 0
+    :left 0
+    :width 100%
+    :height 100%
+    :background transparent url(/images/logo.gif) no-repeat
+
+#navigation
+  :float left
+  :font-size 1.2em
+
+  li
+    :float left
+    :margin-right 10px
+
+    a, a:active
+      +highlight_link
+    
+    a:hover
+      +highlight_link_hover
+    
+    a:after
+      +highlight_after
+
+p.quip
+  :clear left
+  :margin-top 20px
+  :font-size 1.2em
+  :text-align right
+
+  &, & a
+    :color = !very_dull_text
+  a:hover
+    :color = !dull_text
+
+/* Content-specific styles
+
+h1.major
+  :position absolute
+  :top 90px
+  :right 0
+  :text-align right
+
+  :font-size 2.4em
+  :color #fff
+
+  a, a:active
+    :color = !very_bright_text
+
+  a:hover
+    :color = !bright_blue
+
+body.home
+  #body-inner
+    :padding-top 0
+
+  h1.site-header
+    :left 85px
+    :top 113px
+
+  .meta, p.quip
+    :margin-left 330px
+    :width 300px
+  
+  p.quip
+    :text-align left
+  
+  .meta
+    :padding-top 110px
+    :position relative
+    
+    p
+      +standard_text_size
+      :margin-bottom 10px
+      
+    #navigation
+      :margin-top 20px
+      :margin-bottom 30px
+      
+body.archive
+  ol.archive
+    :margin-left 220px
+
+    li
+      :position relative
+    h2
+      :font-size 2.4em
+      :position absolute
+      :top 1px
+      :left -220px
+      :width 100px
+      :text-align right
+      :color #5b6168
+    h3
+      +standard_text_size
+      :position absolute
+      :top 0
+      :left -110px
+      :width 100px
+      :text-align right
+    > li
+      :margin-bottom 40px
+    > li > ol > li
+      :margin-bottom 20px
+    > li > ol > li > ol > li
+      :margin-bottom 10px
+      :margin-left 10px
+      :width 410px
+      +standard_text_size
+
+p.page-desc
+  :margin-bottom 2em
+  :font-size 1.4em
+  :line-height 1.5em
+  :color = !slightly_dull_text
+
+body.archive p.page-desc
+  :margin-left 230px
+  :width 420px
+
+body.projects p.page-desc
+  :margin-left 340px
+  :width 310px
+
+!article_width = 540px
+
+.article
+  h1
+    +big_white_heading
+    :margin-top 2em
+    :margin-bottom 0.5em
+  .about
+    h1
+      :margin-top 0
+      
+  .published
+    +standard_text_size
+    :margin-bottom 2em
+    :text-transform uppercase
+    :font-size 1.2em
+    :color = !bright_text
+    
+    .updated
+      :color = !slightly_dull_text
+  
+  .feedback, .more-reading
+    p
+      +standard_text_size
+      :width = !article_width
+  
+  .content
+    :font-family "Lucida Grande", Arial, sans-serif
+    :margin-bottom 50px
+  
+    > *
+      :width = !article_width
+
+    p, li
+      +standard_text_size
+      :font-size 1.2em
+      :line-height 1.7em
+
+    ul, ol
+      :padding-left 2em
+    ul li, ol li
+      :margin-left 1em
+      :margin-bottom 0.2em
+    ul li
+      :list-style disc
+    ol li
+      :list-style decimal
+
+    p, ul, ol, blockquote
+      :margin-bottom 1em
+      code
+        :font-size 1.2em
+    
+    
+    h2, h3
+      +lucida_cons
+      :word-spacing 0.2em
+      :width = !article_width
+      :line-height 1.5em
+    
+    h2
+      :font-size 1.6em
+      :color = !dull_text
+      :padding-bottom 0.1em
+      :margin-top 2em
+      :margin-bottom 0.5em
+      :text-transform uppercase
+      :border-bottom-color = !very_dull_text
+    h3
+      :font-size 1.6em
+      :color = !dull_text
+      :margin-top 1em
+      :margin-bottom 0.2em
+    h4
+      :font-size = 1.2em * 0.9
+      :text-transform uppercase
+      
+    pre
+      :padding-left 20px
+      
+    blockquote
+      :padding 1em 1em 1px 1.5em
+      :background-color = !grey_background
+      :margin-bottom 2em
+      :color = !slightly_dull_text
+
+    pre
+      :font-family Monaco, courier
+      :font-size 1.6em
+      :margin-bottom 1em
+      :line-height 1.1em
+      :color = !bright_text
+    pre+h2, pre+h3
+      :margin-top 2.5em
+    sup
+      :vertical-align super
+      :font-size 0.8em
+    embed, object
+      :margin-bottom 10px
+    
+    .pic p, .caption
+      :color #f00
+      
+    .pic a img, .frame
+      :border 1px solid
+      :border-color = !very_dull_text
+    .pic a:hover img
+      :border-color = !bright_blue
+      
+    div.update
+      :border-left 5px solid #468
+      :padding-left 1em
+      
+    .one
+      :width 100px
+    .two
+      :width 210px
+    .three
+      :width 320px
+    .four
+      :width 430px
+    .five
+      :width 540px
+    .six
+      :width 650px
+    .seven
+      :width 760px
+      
+    .left
+      :float left
+      :margin-right 20px
+    .right
+      :float right
+      :margin-left 20px
+    / img floated right within text
+    .right.inset 
+      :margin 0 120px 0 20px
+    / img floated right within text
+    .left.inset
+      :margin-left 230px
+      
+    #archived-comments
+      h1
+        +lucida_cons
+      pre
+        :font-size 1.2em
+      li
+        :font-size 1.0em
+    
+    .github-ad
+      :border-left 4px solid #666
+      :padding-left 10px
+      :color #fff
+    
+
+body.projects
+  ol.projects
+    > li
+      :padding-top 20px
+      :margin-bottom 30px
+      :float left
+      :width 100%
+      
+      h2, p
+        :width 420px
+        :float right
+        :clear right
+
+      h2
+        +big_white_heading
+        :margin-bottom 0.5em
+      p
+        +standard_text_size
+        :margin-bottom 1em
+
+        &.link
+          :font-size 1.2em
+        
+          a, a:active
+            +highlight_link
+            :float left
+
+          a:hover
+            +highlight_link_hover
+            
+          a:after
+            +highlight_after
+
+      .images
+        :width 320px
+          
+body.projects-js ol.projects > li
+  :position relative
+
+  .images
+    :position relative
+    :height 213px
+    li
+      :display inline
+    img
+      :display block
+      :position absolute
+      :top 0
+      :left 0
+  
+  .image-navigator
+    :height 10px
+    :position absolute
+    :bottom 5px
+    :right = 440-1+5px
+  
+    li
+      :display inline
+    a
+      :position relative
+      :display block
+      :float left
+      :width 10px
+      :height 10px
+      :text-indent -10000px
+      :margin-right 2px
+    
+      span
+        :position absolute
+        :top 0
+        :left 0
+        :width 100%
+        :height 100%
+        :background transparent url(/images/image-navigator-dots.gif) -10px 0 no-repeat
+      
+      &.active span, &.active:hover span
+        :background-position 0 0
+    
+      &:hover span
+        :background-position -20px 0
+        
+.not-found .content, .error .content
+  p
+    +standard_text_size
+    :text-align center
+    :margin-bottom 1em
+
+.tumble
+  :color = !standard_text
+  :width 400px
+  :margin-left 210px
+  :margin-bottom 50px
+  
+  .post
+    :margin-bottom 50px
+    :position relative
+    .info
+      :position absolute
+      :top 5px
+      :left -15em
+      :width 12em
+      :text-align right
+      .date
+        :text-transform uppercase
+        :font-size 1.2em
+        :color = !dull_text
+      .permalink
+        :margin-top 0.3em
+        :font-size 2.4em
+        a
+          :color = !dull_text
+        a:hover
+          :color = !bright_blue
+  
+    > a
+      :position absolute
+      :top 0
+      :right -2em
+      :color = !dull_text
+      :font-weight bold
+      :font-size 1.4em
+      
+    > a:hover
+      :color = !bright_blue
+  
+  .quote
+    .source
+      :font-size 1.2em
+      :line-height 1.5em
+    .quote_text
+      :color #fff
+      :font-weight bold
+      :margin-bottom 1em
+      .short
+        :font-size 3.6em
+        :line-height 1.2em
+      .medium
+        :font-size 2.7em
+        :line-height 1.4em
+      .long
+        :font-size 1.8em
+        :line-height 1.6em
+
+  .link
+    +standard_text_size
+    a
+      :font-size = 1.8em/1.4em
+    
+  .caption
+    +standard_text_size
+    :margin-top 1em
+      
+  .regular
+    h2
+      :font-size 1.8em
+      :line-height 1.5em
+      :margin-bottom 0.5em
+      a
+        :color = !very_bright_text
+      a:hover
+        :color = !bright_blue
+
+    p, li
+      +standard_text_size
+      :font-size 1.4em
+      :line-height 1.7em
+
+    ul, ol
+      :padding-left 2em
+    ul li, ol li
+      :margin-left 1em
+      :margin-bottom 0.2em
+    ul li
+      :list-style disc
+    ol li
+      :list-style decimal
+
+    p, ul, ol, blockquote
+      :margin-bottom 1em
+      code
+        :font-size 1.2em
+        
+    pre
+      :font-family Monaco, courier
+      :font-size 1.6em
+      :margin-bottom 1em
+      :line-height 1.1em
+      :color = !bright_text
+
+  .prevnext
+    :font-size 1.4em
+    :text-align center
+    a
+      +highlight_link
+      &.prev
+        :float left
+      &.next
+        :float right
+      &:hover
+        +highlight_link_hover
+    .page
+      :line-height 2.5em
+      :color = !dull_text
+      
+body.landscape #body-inner
+  :width = 1024px + 20px + 20px
+
+body.portrait #body-inner
+  :width = 650px + 20px + 20px
+
+body.photo
+  :background #000
+
+  #body-inner
+    :padding-top 40px
+    
+  .main img
+    :border 20px solid #fff
+    :margin-bottom 20px
+
+  h1
+    :font-size 2.4em
+
+  h1 a, h1 a:active
+    :color #fff
+  
+  .description p
+    :color #fff
+      
+  .description
+    +standard_text_size
+    :max-width 40em
+    :margin-top 0.5em
+
+    p
+      :margin-top 0.5em
+      
+  p.comments, p.tags, p.license
+    +standard_text_size
+    :margin-top 5px
+
+  p.comments a
+    :padding-left 17px
+
+  p.comments
+    :margin 10px 0 5px 0
+    a
+      :background transparent url(/images/photo-comments.gif) no-repeat top left
+      :color #fff
+      :opacity 0.6
+      
+      &:hover
+        :opacity 1
+
+  p.tags
+    &, a
+      :color #555
+      
+    a:hover
+      :text-decoration underline
+
+  p.license a
+    :opacity 0.6
+    
+    &:hover
+      :opacity 1
+      
+  .more-photos
+    :margin-top 50px
+    :margin-bottom 20px
+    :float left
+    :width 100%
+    :overflow hidden
+    :position relative
+
+    ul
+      :clear left
+      :float left
+      :position relative
+      :left 50%
+
+      li
+        :display block
+        :float left
+        :position relative
+        :right 50%
+
+        &.current
+          :opacity 0.5
+
+        a
+          :display block
+          :opacity 0.5
+
+          &:hover
+            :opacity 1
+
+        &.current
+          :margin 0 10px
+
+        &.prev
+          a
+            :background transparent url(/images/photo-next-prev.gif) no-repeat top left
+            :padding-left 12px
+
+        &.next
+          a
+            :padding-right 12px
+            :background transparent url(/images/photo-next-prev.gif) no-repeat top right
+            
+  p.more
+    :text-align center
+    a
+      +standard_text_size
+      :opacity 0.4
+      :color #fff
+      
+      &:hover
+        :opacity 0.7
+
+body.photos
+  h2
+    :margin 1em 0
+    :font-size 1.8em
+    :clear both
+    :margin 0
+    :padding 1em 0 0.5em 0
+
+  #recent, #featured
+    :float left
+    :clear left
+  
+    ul, li
+      :display inline
+
+    img
+      :float left
+      :margin-right 9px
+      :margin-bottom 11px
+      
+  #recent
+    :padding-top 0
+
+  #featured
+    :margin-bottom 20px
+    
+    a.last
+      :display block
+      :float left
+      :margin-left -5px
+      
+      img
+        :width 500px
