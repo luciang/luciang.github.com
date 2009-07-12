@@ -5,7 +5,8 @@ title: Debug the Windows kernel with WinDBG over serial
 
 h1. {{ page.title }}
 
-p.
+p(meta). 2 a
+
 # Power on the *DEBUGGER* machine
 # Start windbg and select File->Kernel Debug (or @run windbg -k@).
   Windbg will start and display:
